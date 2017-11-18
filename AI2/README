@@ -1,0 +1,76 @@
+# Author: Ping-Jung Liu
+# Date: September 26th 2017
+# COSC 76 Assignment 2: Mazeworld
+# Acknowledgement: Professor Devin Balkom for providing the general structure 
+
+***README***
+
+Files in this directory:
+
+- Mazeworld.pdf
+
+- Maze.py
+
+- uninformed_search.py
+
+- astar_search
+
+- MazeworldProblem.py
+
+- test_mazeworld.py
+
+- SensorlessProblem.py
+
+- test_sensorless.py
+
+- SearchSolution.py
+
+- maze1-6.maz
+################################################################################
+To run the multi robot problem:
+################################################################################
+If you simply run test_mazeworld.py, the program will use null_heuristic, manhattan_heuristic,
+and bfs_heuristic to solve maze 1, 2, 3, 5, 6. 
+
+To show animation, use commend:
+
+problem_name.animate_path(result.path)
+
+To read a maze:
+
+maze_name = Maze("maze_file")
+
+To create a new multi robot problem:
+
+problem_name = MazeworldProblem(maze_name, goal)
+
+To solve the maze and print results:
+
+result = astar_search(problem_name, heuristic_name)
+print(result)
+
+##################################################################################
+To run the sensorless robot problem:
+##################################################################################
+If you simply run test_sensorless.py, the program will use number of locations heuristic and the spam
+heuristic to solve maze 3, 4, 5.
+
+To show animation, use commend:
+
+problem_name.animate_path(create_path(test_maze, start_location, result.path))
+
+Reading a maze is the same as previous.
+
+To create a new blind robot problem:
+
+problem_name = SensorlessProblem(maze_name, goal)
+
+To solve the maze and print the action planning:
+
+result = astar_search(test_mp, test_mp.num_heuristic)
+result.path = get_path(result)
+print(result)
+
+To test all possible starting points with the solution path:
+
+test_all(maze_name, problem.name, result.path, goal)
