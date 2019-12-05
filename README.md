@@ -1,6 +1,5 @@
 # Author: Ping-Jung Liu
 # Date: September 26th 2017
-# COSC 76 Assignment 2: Mazeworld
 # Acknowledgement: Professor Devin Balkom for providing the general structure 
 
 ***README***
